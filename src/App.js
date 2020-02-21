@@ -9,6 +9,7 @@ import Roy from "./images/roy-kooper.png";
 import Waluigi from "./images/waluigi.jpg";
 import Wario from "./images/Wario_MP100.png";
 import Yoshi from "./images/yoshi.png";
+import Turns from "./components/turn";
 
 class App extends Component {
   state = {
@@ -32,18 +33,22 @@ class App extends Component {
       { flipped: false, image: Yoshi }
     ],
     firstFlip: null,
-    secondFlip: null
+    secondFlip: null,
+    turns: 5
   };
 
   flipHandler = index => {
-    if (this.state.firstFlip == null) {
-      let newCards = this.state.cards;
-      newCards[index].flipped = true;
-      this.setState({ cards: newCards, firstFlip: index });
-    } else if (this.state.secondFlip == null) {
-      let newCards = this.state.cards;
-      newCards[index].flipped = true;
-      this.setState({ cards: newCards, secondFlip: index });
+    if (this.state.turns === 0) {
+    } else {
+      if (this.state.firstFlip == null) {
+        let newCards = this.state.cards;
+        newCards[index].flipped = true;
+        this.setState({ cards: newCards, firstFlip: index });
+      } else if (this.state.secondFlip == null) {
+        let newCards = this.state.cards;
+        newCards[index].flipped = true;
+        this.setState({ cards: newCards, secondFlip: index });
+      }
     }
   };
 
@@ -54,18 +59,26 @@ class App extends Component {
 
     if (firstFlip != null && secondFlip != null) {
       if (cards[firstFlip].image === cards[secondFlip].image) {
-        console.log("its a match");
-        this.setState({ firstFlip: null, secondFlip: null });
+        this.setState({
+          firstFlip: null,
+          secondFlip: null,
+          message: "its a match"
+        });
       } else if (cards[firstFlip].image !== cards[secondFlip].image) {
         setTimeout(() => {
           let newCards = this.state.cards;
           newCards[firstFlip].flipped = false;
           newCards[secondFlip].flipped = false;
-          this.setState({ cards: newCards, firstFlip: null, secondFlip: null });
+          this.setState({
+            cards: newCards,
+            firstFlip: null,
+            secondFlip: null,
+            turns: this.state.turns - 1,
+            message: "These aren't a match"
+          });
         }, 1000);
       }
     }
-    this.winningLogic();
   }
   refreshPage = () => {
     window.location.reload(false);
@@ -80,16 +93,21 @@ class App extends Component {
   render() {
     return (
       <div className="board">
-        {this.state.cards.map((card, index) => {
-          return (
-            <Card
-              key={index}
-              image={card.image}
-              flipped={card.flipped}
-              click={() => this.flipHandler(index)}
-            />
-          );
-        })}
+        <div className="turns">
+          <Turns turn={this.state.turns} />
+        </div>
+        <div className="cards">
+          {this.state.cards.map((card, index) => {
+            return (
+              <Card
+                key={index}
+                image={card.image}
+                flipped={card.flipped}
+                click={() => this.flipHandler(index)}
+              />
+            );
+          })}
+        </div>
         <p>{this.state.message}</p>
         <button className="reset" onClick={this.refreshPage}>
           Click to reset game
