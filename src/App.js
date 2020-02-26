@@ -93,16 +93,6 @@ class App extends Component {
   render() {
     return (
       <div className="board">
-        {this.state.cards.map((card, index) => {
-          return (
-            <Card
-              key={index}
-              image={card.image}
-              flipped={card.flipped}
-              click={() => this.flipHandler(index)}
-            />
-          );
-        })}
         <div className="turns">
           <Turns turn={this.state.turns} />
         </div>
