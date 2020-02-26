@@ -34,7 +34,7 @@ class App extends Component {
     ],
     firstFlip: null,
     secondFlip: null,
-    turns: 5
+    turns: 20
   };
 
   flipHandler = index => {
