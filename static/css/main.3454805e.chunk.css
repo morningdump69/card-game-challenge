@@ -1,0 +1,2 @@
+.card-front{background-color:#00f}.card-back,.card-front{height:150px;width:150px;display:flex;justify-content:center;align-items:center;margin:5px;border-radius:5px}.card-back{overflow:hidden}.card-image{width:150px}.board{max-width:750px;justify-content:center;flex-wrap:wrap;flex-direction:column}.board,.cards,.turns{display:flex}.cards{flex-wrap:wrap}
+/*# sourceMappingURL=main.3454805e.chunk.css.map */
