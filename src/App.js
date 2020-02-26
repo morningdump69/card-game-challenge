@@ -9,10 +9,7 @@ import Roy from "./images/roy-kooper.png";
 import Waluigi from "./images/waluigi.jpg";
 import Wario from "./images/Wario_MP100.png";
 import Yoshi from "./images/yoshi.png";
-<<<<<<< HEAD
-=======
 import Turns from "./components/turn";
->>>>>>> 373bc91ac6105848fcd9e7513eb8f2154ffb8ed9
 
 class App extends Component {
   state = {
@@ -96,7 +93,6 @@ class App extends Component {
   render() {
     return (
       <div className="board">
-<<<<<<< HEAD
         {this.state.cards.map((card, index) => {
           return (
             <Card
@@ -107,7 +103,6 @@ class App extends Component {
             />
           );
         })}
-=======
         <div className="turns">
           <Turns turn={this.state.turns} />
         </div>
@@ -123,7 +118,6 @@ class App extends Component {
             );
           })}
         </div>
->>>>>>> 373bc91ac6105848fcd9e7513eb8f2154ffb8ed9
         <p>{this.state.message}</p>
         <button className="reset" onClick={this.refreshPage}>
           Click to reset game
