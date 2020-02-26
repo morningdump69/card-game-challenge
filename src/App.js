@@ -93,6 +93,7 @@ class App extends Component {
   render() {
     return (
       <div className="board">
+        <h1> Memory Game </h1>
         <div className="turns">
           <Turns turn={this.state.turns} />
         </div>
