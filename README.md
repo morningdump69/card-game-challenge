@@ -1,5 +1,7 @@
-This project is a bug fixing/feature addition challenge for Code Nation students.
+This was a react project to make a card flip matching game
 
-## Click on the issues tab at the top of this repo to see current issues
+i had to add a ability to restart the game
 
-Students will need to fork this repo and clone it to their machine.
+had to add extra card to ensure there was 16 cards in total
+
+implemetned a restart game button which would refresh the page to restart.
