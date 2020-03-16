@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/card-game-challenge/static/css/main.3454805e.chunk.css",
-    "main.js": "/card-game-challenge/static/js/main.cd3172f2.chunk.js",
-    "main.js.map": "/card-game-challenge/static/js/main.cd3172f2.chunk.js.map",
+    "main.css": "/card-game-challenge/static/css/main.5f2d7cd9.chunk.css",
+    "main.js": "/card-game-challenge/static/js/main.2c13b9b4.chunk.js",
+    "main.js.map": "/card-game-challenge/static/js/main.2c13b9b4.chunk.js.map",
     "runtime-main.js": "/card-game-challenge/static/js/runtime-main.13214409.js",
     "runtime-main.js.map": "/card-game-challenge/static/js/runtime-main.13214409.js.map",
     "static/js/2.a1121a35.chunk.js": "/card-game-challenge/static/js/2.a1121a35.chunk.js",
     "static/js/2.a1121a35.chunk.js.map": "/card-game-challenge/static/js/2.a1121a35.chunk.js.map",
     "index.html": "/card-game-challenge/index.html",
-    "precache-manifest.32e7a9e1dbed04239e8dbfccaf1812f1.js": "/card-game-challenge/precache-manifest.32e7a9e1dbed04239e8dbfccaf1812f1.js",
+    "precache-manifest.f91ff933ae76fdb8fa7d17da754a8c3a.js": "/card-game-challenge/precache-manifest.f91ff933ae76fdb8fa7d17da754a8c3a.js",
     "service-worker.js": "/card-game-challenge/service-worker.js",
-    "static/css/main.3454805e.chunk.css.map": "/card-game-challenge/static/css/main.3454805e.chunk.css.map",
+    "static/css/main.5f2d7cd9.chunk.css.map": "/card-game-challenge/static/css/main.5f2d7cd9.chunk.css.map",
     "static/js/2.a1121a35.chunk.js.LICENSE.txt": "/card-game-challenge/static/js/2.a1121a35.chunk.js.LICENSE.txt",
     "static/media/DryBowserSmash3.png": "/card-game-challenge/static/media/DryBowserSmash3.2c593025.png",
     "static/media/Morton_SSBU.png": "/card-game-challenge/static/media/Morton_SSBU.511f5f28.png",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.13214409.js",
     "static/js/2.a1121a35.chunk.js",
-    "static/css/main.3454805e.chunk.css",
-    "static/js/main.cd3172f2.chunk.js"
+    "static/css/main.5f2d7cd9.chunk.css",
+    "static/js/main.2c13b9b4.chunk.js"
   ]
 }
