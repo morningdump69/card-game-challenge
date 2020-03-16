@@ -92,26 +92,28 @@ class App extends Component {
 
   render() {
     return (
-      <div className="board">
-        <div className="turns">
-          <Turns turn={this.state.turns} />
+      <div className="container">
+        <div className="board">
+          <div className="turns">
+            <Turns turn={this.state.turns} />
+          </div>
+          <div className="cards">
+            {this.state.cards.map((card, index) => {
+              return (
+                <Card
+                  key={index}
+                  image={card.image}
+                  flipped={card.flipped}
+                  click={() => this.flipHandler(index)}
+                />
+              );
+            })}
+          </div>
+          <p className="ptag">{this.state.message}</p>
+          <button className="reset" onClick={this.refreshPage}>
+            Click to reset game
+          </button>
         </div>
-        <div className="cards">
-          {this.state.cards.map((card, index) => {
-            return (
-              <Card
-                key={index}
-                image={card.image}
-                flipped={card.flipped}
-                click={() => this.flipHandler(index)}
-              />
-            );
-          })}
-        </div>
-        <p>{this.state.message}</p>
-        <button className="reset" onClick={this.refreshPage}>
-          Click to reset game
-        </button>
       </div>
     );
   }

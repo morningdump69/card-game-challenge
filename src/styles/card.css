@@ -23,3 +23,31 @@
 .card-image {
   width: 150px;
 }
+
+@media only screen and (max-width: 650px) {
+  .card-front {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  .card-back {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .card-image {
+    width: 100px;
+  }
+}
